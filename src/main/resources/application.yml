@@ -1,0 +1,28 @@
+#
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/ontology?useUnicode=true&characterEncoding=UTF-8
+  jpa:
+    show-sql: true
+  jackson:
+    default-property-inclusion: non_null
+  http:
+    encoding:
+      charset: UTF-8
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    timeout: 3000
+    password: foobared
+  cache:
+    cache-names: menus_cache
+    redis:
+      time-to-live: 1800s
+#处理option请求
+  mvc:
+    dispatch-options-request: true
+
+server:
+  port: 8000
